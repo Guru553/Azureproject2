@@ -1,0 +1,9 @@
+{
+	"name": "DF-Guruproject",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6a30dc1f-5c2d-4d9a-8b2a-9703c02f39c2",
+		"tenantId": "ffe3b169-48e5-47fb-952a-3678d7bc9a79"
+	}
+}
