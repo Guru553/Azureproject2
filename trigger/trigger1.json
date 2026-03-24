@@ -1,0 +1,29 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "incremental_injution",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"schema": "dbo",
+					"table": "DimUser",
+					"cdc_col": "updated_at"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2026-03-24T15:16:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
