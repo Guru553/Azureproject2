@@ -1,5 +1,5 @@
 {
-	"name": "incremental_injution",
+	"name": "incremental_injution_loop",
 	"properties": {
 		"activities": [
 			{
@@ -275,11 +275,8 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"container": "bronze",
-										"folder": {
-											"value": "@{pipeline().parameters.table}_cdc",
-											"type": "Expression"
-										},
-										"file": "cdc.json"
+										"folder": "cdc",
+										"file": "empty.json"
 									}
 								}
 							],
@@ -290,7 +287,7 @@
 									"parameters": {
 										"container": "bronze",
 										"folder": {
-											"value": "@pipeline().parameters.table",
+											"value": "@{pipeline().parameters.table}_cdc",
 											"type": "Expression"
 										},
 										"file": "cdc.json"
